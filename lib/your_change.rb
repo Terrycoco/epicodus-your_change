@@ -53,17 +53,14 @@ class Fixnum
     end
 
     final = result.join(", ")
-    final = final.reverse()
-    final = final.sub(',','dna ')
+    final = final.reverse_sub(',', ' and')
 
     if apology.length().>(0)
-      apology = apology.strip!.reverse()
-      apology = apology.sub(',', '')
-      apology = apology.sub(',', 'dna ')
-      apology = apology.reverse()
+      apology = apology.strip!.reverse_sub(',', '')
+      apology = apology.reverse_sub(',', ' and')
       apology = "Sorry! We are out of ".concat(apology).concat('. Your change is: ')
     end
 
-    final = apology.concat(final.reverse())
+    final = apology.concat(final)
   end
 end
