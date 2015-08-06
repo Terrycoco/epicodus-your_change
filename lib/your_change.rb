@@ -1,6 +1,5 @@
 class Fixnum
   define_method(:your_change) do
-    require('reverse_sub')
     remainder = self
     apology = ''
 
