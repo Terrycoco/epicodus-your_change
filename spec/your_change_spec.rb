@@ -3,6 +3,7 @@ require('your_change')
 
 describe('Fixnum#your_change') do
   it('accepts an amount and returns how many quarters') do
+    expect(75.your_change()).to(eq('3 quarters'))
     expect(50.your_change()).to(eq('2 quarters'))
     expect(25.your_change()).to(eq('1 quarter'))
   end

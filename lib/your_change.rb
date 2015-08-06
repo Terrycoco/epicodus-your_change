@@ -20,7 +20,7 @@ class Fixnum
         until remainder.<(coin.fetch('interval'))
           count = coin.fetch('count')
 
-          if count.>=(1)
+          if count.==(1)
             coin.store('denom', coin.fetch('denom').concat('s'))
             coin.store('denom', (coin.fetch('denom')).sub('y','ie'))
           end
