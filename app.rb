@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 require('./lib/your_change')
+require('./lib/reverse_sub')
 also_reload('lib/**/*.rb')
 
 get('/') do
